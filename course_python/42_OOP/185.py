@@ -37,6 +37,14 @@ class Forum:
 
         return found_posts
     
+    def find_user_text_by_email(self, email):
+        user_texts = []
+        for post in self.posts:
+            if post.author == email:
+                user_texts.append(post.text)
+        
+        return user_texts
+    
 
 forum = Forum()
 
@@ -46,6 +54,9 @@ first_post = forum.create_post("First post", "Posts text about his life", first_
 print(forum.posts[0].title, forum.posts[0].text)
 
 find_user = forum.find_post_by_username(first_user)
+
+found_text = forum.find_user_text_by_email(first_user)
+print(found_text)
 
 print(first_user.name)
 
