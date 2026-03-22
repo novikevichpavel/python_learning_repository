@@ -3,11 +3,13 @@ class User:
         self.name = name
         self.email = email
 
+
 class Post:
     def __init__(self, title: str, text: str, author: User):
         self.title = title
         self.text = text
         self.author = author
+
 
 class Forum:
     def __init__(self):
