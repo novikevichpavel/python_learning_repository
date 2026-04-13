@@ -38,7 +38,7 @@ DB_NAME = "sql_db.db"
 import sqlite3
 
 class Course:
-    DB_NAME = "new_data_base.db"
+    DB_NAME = "new_data_base_two.db"
     saved_data = []
 
     def __init__(self):
@@ -61,7 +61,7 @@ class Course:
             sql_db.commit()
 
     def get_course_data(self):
-        for i in range(3):
+        for i in range(1):
             course_id = int(input("Enter course id: "))
             course_title = input("Enter course name: ")
             course_progress = int(input("Enter your porgress: "))
